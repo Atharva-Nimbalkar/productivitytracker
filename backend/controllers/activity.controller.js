@@ -4,15 +4,17 @@ const Activity = require("../models/activity.model");
 
 // * It's an async function that uses the Activity model to find all activities and 
 // then returns a status of 200 with the activities in the response body.
-const getActivitites=async(req,res)=>{
+const getActivities=async(req,res)=>{
     try{
-        const activites=await Activity.find();
+        const activities=await Activity.find();
         res.status(200).json(activities);
     }catch(err){
         res.status(500).json({error:err.message});
     }
 };
 
+
+// * It creates a new activity and saves it to the database.
 const addActivity=async(req,res)=>{
     const activity=new Activity(req.body);
     try{
