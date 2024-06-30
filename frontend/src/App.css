@@ -1,10 +1,12 @@
 body {
   background-image: linear-gradient(
-    83.2deg,
-    rgba(150, 93, 233, 1) 10.8%,
-    rgba(99, 88, 238, 1) 94.3%
+    120deg,
+    rgba(30, 144, 255, 1) 0%,
+    rgba(32, 178, 170, 1) 100%
   );
-  color: #fff;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  transition: background 0.5s, color 0.5s;
 }
 
 .app {
@@ -13,6 +15,7 @@ body {
 
 .app-header h1 {
   text-align: center;
+  color: #fff;
 }
 
 .app-header form {
@@ -29,30 +32,35 @@ body {
 
 .app-header form input {
   margin: 0 10px;
-  padding: 5px;
+  padding: 10px;
   border: none;
-  border-bottom: 2px solid #ccc;
-  width: 200px;
-  background: transparent;
-  color: #fff;
+  border-radius: 25px;
+  width: 250px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
 .app-header form input:focus {
   outline: none;
-  border-bottom: 2px solid #5800ff;
+  border: 2px solid #1e90ff;
+  box-shadow: 0 4px 8px rgba(30, 144, 255, 0.3);
 }
 
 .app-header form button {
   margin: 10px;
-  padding: 5px;
+  padding: 10px;
   border: none;
-  border-radius: 3px;
-  width: 200px;
+  border-radius: 25px;
+  width: 250px;
   cursor: pointer;
-  background-image: linear-gradient(
-    102.4deg,
-    rgba(253, 189, 85, 1) 7.8%,
-    rgba(249, 131, 255, 1) 100.3%
-  );
+  background: linear-gradient(135deg, rgba(255, 99, 71, 1) 0%, rgba(255, 140, 0, 1) 100%);
   color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.app-header form button:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
