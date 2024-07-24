@@ -6,6 +6,7 @@ const cors=require('cors');
 
 const app = express();
 const ActivityRouter=require('./routes/activity.route');
+const AuthRouter=require("/.routes/auth.route");
 /* Loading the environment variables from the .env file. */
 require("dotenv").config();
 
@@ -21,6 +22,11 @@ app.use(express.json());
 /* Telling the application to use the ActivityRouter for any requests that start with "/api". */
 app.use("/api",ActivityRouter);
 
+/* `app.use("/api/auth", AuthRouter);` is setting up a route handler for any requests that start with
+"/api/auth". It tells the application to use the `AuthRouter` middleware for handling these specific
+requests. This means that any requests to routes starting with "/api/auth" will be directed to the
+routes defined in the `AuthRouter` module for further processing and handling. */
+app.use("/api/auth",AuthRouter);
 /* This is a route handler. It is listening for a GET request to the root route of the application.
 When it receives a request, it will send back a response with the string "Hello World!". */
 app.get("/", (req, res) => {
