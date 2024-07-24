@@ -1,3 +1,5 @@
+/* This code snippet is setting up a basic Node.js server using Express framework. Here's a breakdown
+of what each part does: */
 const express = require("express");
 const mongoose = require("mongoose");
 const cors=require('cors');
